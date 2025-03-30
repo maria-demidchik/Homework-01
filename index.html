@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -27,11 +27,13 @@
 
     <section data-cy="hw1-section-about-pre">
         <!-- 2) В этом разделе создай выпадающий список с разными городами (не меньше 3-х). Свой город сделай вторым в этом списке. С помощью специального атрибута, сделай так, чтобы твой город всегда был выбранным по умолчанию  -->
-        <select>
-            <option>Гомель</option>
-            <option selected disabled value="Минск">Минск</option>
-            <option value="Брест">Брест</option>
-        </select>
+        <div>
+            <select>
+                <option>Гомель</option>
+                <option selected disabled value="Минск">Минск</option>
+                <option value="Брест">Брест</option>
+            </select>
+        </div>
 
         <div data-cy="hw1-unordered-list-box-pre">
             <!-- 3) В этом разделе создай 2 дочерних элемента: -->
@@ -59,26 +61,30 @@
             </ol>
         </div>
         <div data-cy="hw1-skills-box-pre">
-            <h2>Мои скиллы</h2>
             <!-- 4) Здесь создай несколько чекбоксов с подписью (не меньше 3-х). 
                 - В подписи укажи названия любых тем по верстке (все, что знаешь или слышал). 
                 - Каждый чекбокс должен быть связан со своей подписью. Для этого чекбокс должен находиться в элементе для подписи
                 - Отметь "галочкой" (с помощью специального атрибута) темы, которые ты уже знаешь. -->
-            <label for="html">
-                <input id="html" type="checkbox" name="skills" value="HTML" checked>
+            <fieldset>
+                <legend>Мои скиллы</legend>
+                <label for="html">
+                    <input id="html" type="checkbox" name="skills" value="HTML" checked>
                 HTML
-            </label>
-            <label for="css">
-                <input id="css" type="checkbox" name="skills" value="CSS">
+                </label>
+                <label for="css">
+                    <input id="css" type="checkbox" name="skills" value="CSS">
                 CSS
-            </label>
-            <labe>
-                <input id="JS" type="checkbox" name="skills" value="JS">
+                </label>
+                <label>
+                    <input id="JS" type="checkbox" name="skills" value="JS">
                 JS
-            </label>
+                </label>
+            </fieldset>
         </div>
         <!-- 5) Создай здесь однострочное поле для ввода текста с подсказкой "Новый скилл", которая исчезает, когда начинаешь что-то печатать (для подсказки есть специальный атрибут) -->
-        <input type="text" placeholder="Новый скилл">
+        <label for="skill">
+            <input id="skill" type="text" placeholder="Новый скилл">
+        </label>
         <!-- 6) Создай здесь кнопку “Добавить” -->
         <button>Добавить</button>
         <!-- 7) Добавь горизонтальную линию (для этого есть специальный тег) -->
